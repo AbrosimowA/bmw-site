@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея BMW M - История BMW</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .gallery-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(220, 0, 0, 0.15);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      aspect-ratio: 16 / 9;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-20px) scale(1.03);
+      box-shadow: 0 20px 50px rgba(220, 0, 0, 0.3);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s ease;
+      flex: 1;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.15) rotate(2deg);
+    }
+
+    .gallery-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.95) 100%);
+      padding: 30px 20px 20px;
+      color: #e8e8e8;
+      transform: translateY(100px);
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-card:hover .gallery-info {
+      transform: translateY(0);
+    }
+
+    .gallery-info h3 {
+      color: var(--bmw-red);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .gallery-info p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #d0d0d0;
+    }
+
+    .gallery-badge {
+      display: inline-block;
+      backgro#ffffff;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-top: 10px;
+      font-weight: bold;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)
+      font-weight: bold;
+    }
+
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border: 2px solid var(--bmw-red);
+      background: transparent;
+      color: var(--bmw-red);
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--bmw-red);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .gallery-section {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      }
+      
+      .gallery-card {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-section {
+        grid-template-columns: 1fr;
+      }
+      
+      .gallery-card {
+        aspect-ratio: 16 / 9;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">BMW</div>
+        <span>История BMW</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./pages/history.html">История</a></li>
+          <li><a href="./pages/models.html">Модели</a></li>
+          <li><a href="./pages/timeline.html">Временная шкала</a></li>
+          <li><a href="./pages/gallery.html">Галерея</a></li>
+          <li><a href="./pages/achievements.html">Достижения</a></li>
+          <li><a href="./pages/contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" title="Переключить тему">🌙</button>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Галерея BMW M</h1>
+      <p class="hero-subtitle">Высокопроизводительные автомобили</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section style="background: var(--white);">
+      <div class="container">
+        <h2 class="section-title">Шедевры M Series</h2>
+
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="sedan">Седаны</button>
+          <button class="filter-btn" data-filter="suv">Внедорожники</button>
+          <button class="filter-btn" data-filter="coupe">Купе</button>
+          <button class="filter-btn" data-filter="electric">Электро</button>
+          <button class="filter-btn" data-filter="vintage">Винтаж</button>
+          <button class="filter-btn" data-filter="models">Модели</button>
+          <button class="filter-btn" data-filter="history">История</button>
+        </div>
+
+        <div class="gallery-section" id="galleryContainer">
+          <!-- Галерея загружается динамически из JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>О сайте</h3>
+        <p>Этот сайт посвящен полной истории автомобильной компании BMW - от её основания в 1916 году до наших дней.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Навигация</h3>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./pages/history.html">История</a></li>
+          <li><a href="./pages/models.html">Модели</a></li>
+          <li><a href="./pages/timeline.html">Временная шкала</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Больше</h3>
+        <ul>
+          <li><a href="./pages/gallery.html">Галерея</a></li>
+          <li><a href="./pages/achievements.html">Достижения</a></li>
+          <li><a href="./pages/contact.html">Контакты</a></li>
+          <li><a href="#">О разработчике</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Контакты</h3>
+        <p>📧 Email: info@bmw-history.ru</p>
+        <p>📱 Телефон: +7 (XXX) XXX-XX-XX</p>
+        <p>🌐 Веб-сайт: www.bmw-history.ru</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 История BMW. Все права защищены.</p>
+      <p>Это веб-сайт создан в образовательных целях и не является официальным сайтом BMW Group.</p>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <div class="scroll-to-top">↑</div>
+
+  <script src="./js/script.js"></script>
+  <script>
+    // Список всех фотографий
+    const allPhotos = [
+      { name: '1.jpeg', title: 'BMW - Основание', category: 'history' },
+      { name: '1916.jpeg', title: 'Год основания BMW', category: 'history' },
+      { name: '2.jpg', title: 'Производство', category: 'history' },
+      { name: '3.jpg', title: 'Модель 3', category: 'models' },
+      { name: '3045.jpeg', title: 'Классический BMW', category: 'vintage' },
+      { name: '3ser1974.jpeg', title: 'BMW 3 Series 1974', category: 'vintage' },
+      { name: '4.jpeg', title: 'Модель 4', category: 'models' },
+      { name: '5.jpeg', title: 'Модель 5', category: 'models' },
+      { name: '6.jpg', title: 'Модель 6', category: 'models' },
+      { name: 'BMW1500&2002.jpeg', title: 'BMW 1500 & 2002', category: 'vintage' },
+      { name: 'BMW1SERIES.jpeg', title: 'BMW 1 Series', category: 'models' },
+      { name: 'BMW2SERIES.jpeg', title: 'BMW 2 Series', category: 'models' },
+      { name: 'BMW3SERIES.jpeg', title: 'BMW 3 Series', category: 'sedan' },
+      { name: 'BMW4SERIES.jpeg', title: 'BMW 4 Series', category: 'coupe' },
+      { name: 'BMW501.jpeg', title: 'BMW 501', category: 'vintage' },
+      { name: 'BMW5SERIES.jpeg', title: 'BMW 5 Series', category: 'sedan' },
+      { name: 'BMW5SERIES1972.jpeg', title: 'BMW 5 Series 1972', category: 'vintage' },
+      { name: 'BMW6SERIES.jpeg', title: 'BMW 6 Series', category: 'coupe' },
+      { name: 'BMW700.jpeg', title: 'BMW 700', category: 'vintage' },
+      { name: 'BMW7SERIES.jpeg', title: 'BMW 7 Series', category: 'sedan' },
+      { name: 'BMW7SERIES1977.jpeg', title: 'BMW 7 Series 1977', category: 'vintage' },
+      { name: 'BMW8SERIES.jpeg', title: 'BMW 8 Series', category: 'coupe' },
+      { name: 'BMWISETTA.jpeg', title: 'BMW Isetta', category: 'vintage' },
+      { name: 'BMW_I3_2013.jpeg', title: 'BMW i3 2013', category: 'electric' },
+      { name: 'BMW_I8_2014.jpeg', title: 'BMW i8 2014', category: 'electric' },
+      { name: 'BMW_M_2.jpeg', title: 'BMW M2', category: 'sedan' },
+      { name: 'BMW_M_3.jpeg', title: 'BMW M3', category: 'sedan' },
+      { name: 'BMW_M_4.jpeg', title: 'BMW M4', category: 'coupe' },
+      { name: 'BMW_M_440.jpeg', title: 'BMW M440i', category: 'sedan' },
+      { name: 'BMW_M_5.jpeg', title: 'BMW M5', category: 'sedan' },
+      { name: 'BMW_M_8.jpeg', title: 'BMW M8', category: 'coupe' },
+      { name: 'BMW_PLUG-IN.jpeg', title: 'BMW Plug-in Hybrid', category: 'electric' },
+      { name: 'BMW_x_5.jpeg', title: 'BMW X5', category: 'suv' },
+      { name: 'BMW_x_5m.jpeg', title: 'BMW X5 M', category: 'suv' },
+      { name: 'BMW_x_6.jpeg', title: 'BMW X6', category: 'suv' },
+      { name: 'BMW_x_6m.jpeg', title: 'BMW X6 M', category: 'suv' },
+      { name: 'BMW_xm.jpeg', title: 'BMW XM', category: 'suv' },
+      { name: 'BMW_z_4.jpeg', title: 'BMW Z4', category: 'coupe' },
+      { name: 'BMW_z_4m.jpeg', title: 'BMW Z4 M', category: 'coupe' },
+      { name: 'Dixi.jpeg', title: 'BMW Dixi', category: 'vintage' },
+      { name: 'IX.jpeg', title: 'BMW iX', category: 'electric' },
+      { name: 'M3_1986.jpeg', title: 'BMW M3 1986', category: 'vintage' },
+      { name: 'X5_1999.jpeg', title: 'BMW X5 1999', category: 'vintage' },
+      { name: 'm3.jpeg', title: 'BMW M3', category: 'sedan' },
+      { name: 'm5.jpeg', title: 'BMW M5', category: 'sedan' },
+      { name: 'mpwr.jpeg', title: 'BMW M Performance', category: 'sedan' },
+      { name: 'msport.jpeg', title: 'BMW M Sport', category: 'sedan' },
+      { name: 'night.jpeg', title: 'BMW в ночи', category: 'other' },
+      { name: 'r32.jpg', title: 'BMW R32', category: 'vintage' },
+      { name: 'x5m.jpeg', title: 'BMW X5 M', category: 'suv' }
+    ];
+
+    // Функция для рендеринга галереи
+    function renderGallery(filter = 'all') {
+      const container = document.getElementById('galleryContainer');
+      container.innerHTML = '';
+      
+      const imagePath = './images/';
+      
+      allPhotos.forEach((photo, index) => {
+        if (filter === 'all' || photo.category === filter) {
+          const card = document.createElement('div');
+          card.className = 'gallery-card';
+          card.dataset.category = photo.category;
+          card.style.animation = 'fadeScale 0.6s ease-out';
+          card.style.animationDelay = `${index * 0.05}s`;
+          card.style.animationFillMode = 'both';
+          
+          card.innerHTML = `
+            <img src="${imagePath}${photo.name}" alt="${photo.title}" loading="lazy">
+            <div class="gallery-info">
+              <h3>${photo.title}</h3>
+              <p>${photo.name}</p>
+              <span class="gallery-badge">${photo.category.toUpperCase()}</span>
+            </div>
+          `;
+          
+          container.appendChild(card);
+        }
+      });
+    }
+
+    // Инициализация галереи
+    renderGallery();
+
+    // Filter functionality for gallery
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        renderGallery(filter);
+      });
+    });
+  </script>
+</body>
+</html>

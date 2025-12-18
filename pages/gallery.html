@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея BMW - Фотографии моделей</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- HEADER -->
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">BMW</div>
+        <span>История BMW</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="./history.html">История</a></li>
+          <li><a href="./models.html">Модели</a></li>
+          <li><a href="./timeline.html">Временная шкала</a></li>
+          <li><a href="./gallery.html">Галерея</a></li>
+        </ul>
+      </nav>
+      <div class="theme-selector">
+        <button class="theme-btn" data-theme="dark" title="Темная 🌙" onclick="changeTheme('dark')">🌙</button>
+        <button class="theme-btn" data-theme="light" title="Светлая ☀️" onclick="changeTheme('light')">☀️</button>
+        <button class="theme-btn" data-theme="bmw-m-dark" title="BMW M Dark 🏁" onclick="changeTheme('bmw-m-dark')">🏁</button>
+        <button class="theme-btn" data-theme="bmw-m-red" title="BMW M Red 🔴" onclick="changeTheme('bmw-m-red')">🔴</button>
+        <button class="theme-btn" data-theme="sport" title="Sport ⚡" onclick="changeTheme('sport')">⚡</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../index.html">Главная</a>
+    <span>/</span>
+    <span>Галерея</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" style="padding: 80px 20px;">
+    <div class="hero-content">
+      <h1>Галерея BMW</h1>
+      <p class="hero-subtitle">Визуальная история автомобилей</p>
+    </div>
+  </section>
+
+  <main class="gallery-page">
+    <!-- FILTER SECTION -->
+    <section style="background: var(--secondary-blue); padding: 40px 20px;">
+      <div class="container">
+        <h3 style="text-align: center; margin-bottom: 25px; color: var(--white);">Фильтр по классу</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Все модели</button>
+          <button class="filter-btn" data-filter="classic">Классические</button>
+          <button class="filter-btn" data-filter="sedan">Седаны</button>
+          <button class="filter-btn" data-filter="suv">Внедорожники</button>
+          <button class="filter-btn" data-filter="m-series">M-Серия</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLASSIC MODELS GALLERY -->
+    <section style="background: var(--dark-blue);" data-category="classic">
+      <div class="container">
+        <h2 class="section-title">Классические модели</h2>
+        
+        <div class="gallery-group">
+          <div class="gallery-group-title">🏆 Легендарные автомобили прошлого</div>
+          <div class="gallery-group-subtitle">Классические модели BMW 1930-1970 годов</div>
+          <div class="cards-grid">
+            <div class="card" data-category="classic">
+              <div class="card-image"><img src="../images/BMW 328 (1936).jpeg" alt="BMW Classic" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 328</div>
+                <p class="card-text">Спортивный автомобиль, произведенный с 1936 по 1940 год.</p>
+                <span class="card-year">1936</span>
+              </div>
+            </div>
+            <div class="card" data-category="classic">
+              <div class="card-image"><img src="../images/BMW501.jpeg" alt="BMW Classic" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 501</div>
+                <p class="card-text">Премиум-седан, представленный в 1952 году.</p>
+                <span class="card-year">1952</span>
+              </div>
+            </div>
+            <div class="card" data-category="classic">
+              <div class="card-image"><img src="../images/BMWISETTA.jpeg" alt="BMW Isetta" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW Isetta</div>
+                <p class="card-text">Микромобиль, характеризующийся единственной входной дверью спереди.</p>
+                <span class="card-year">1955</span>
+              </div>
+            </div>
+            <div class="card" data-category="classic">
+              <div class="card-image"><img src="../images/BMW700.jpeg" alt="BMW 700" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 700</div>
+                <p class="card-text">Компактный автомобиль с задним расположением двигателя.</p>
+                <span class="card-year">1959</span>
+              </div>
+            </div>
+            <div class="card" data-category="classic">
+              <div class="card-image"><img src="../images/BMW 1500.jpeg" alt="BMW 1500" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 1500</div>
+                <p class="card-text">Революционный спортивный седан, установивший новые стандарты.</p>
+                <span class="card-year">1966</span>
+              </div>
+            </div>
+            <div class="card" data-category="classic">
+              <div class="card-image"><img src="../images/BMW 2002.jpeg" alt="BMW 2002" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 2002</div>
+                <p class="card-text">Культовый компактный спортивный седан 1970-х годов.</p>
+                <span class="card-year">1970</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODERN SERIES GALLERY -->
+    <section style="background: var(--dark-blue);" data-category="sedan,suv">
+      <div class="container">
+        <h2 class="section-title">Современные серии</h2>
+        
+        <div class="gallery-group">
+          <div class="gallery-group-title">🚗 Седаны</div>
+          <div class="gallery-group-subtitle">Премиум-седаны серий 3, 5, 7</div>
+          <div class="cards-grid">
+            <div class="card" data-category="sedan">
+              <div class="card-image"><img src="../images/bmw_3_330I.jpeg" alt="BMW 3 Series" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 3 Series</div>
+                <p class="card-text">Премиум-седан среднего класса с современным дизайном.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+            <div class="card" data-category="sedan">
+              <div class="card-image"><img src="../images/bmw_5_530е.jpeg" alt="BMW 5 Series" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 5 Series</div>
+                <p class="card-text">Премиум-седан премиум-класса с передовыми технологиями.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+            <div class="card" data-category="sedan">
+              <div class="card-image"><img src="../images/bmw_7.jpeg" alt="BMW 7 Series" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 7 Series</div>
+                <p class="card-text">Флагманский седан BMW с роскошью и инновациями.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+            <div class="card" data-category="sedan">
+              <div class="card-image"><img src="../images/6.jpg" alt="BMW 6 GT" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 6 GT</div>
+                <p class="card-text">Спортивный лифтбэк с практичностью и производительностью.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-group">
+          <div class="gallery-group-title">🏎️ Внедорожники</div>
+          <div class="gallery-group-subtitle">Премиум-кроссоверы серии X</div>
+          <div class="cards-grid">
+            <div class="card" data-category="suv">
+              <div class="card-image"><img src="../images/BMW_x_5.jpeg" alt="BMW X5" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW X5</div>
+                <p class="card-text">Премиум-кроссовер среднего размера с высокой проходимостью.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+            <div class="card" data-category="suv">
+              <div class="card-image"><img src="../images/bmw_x3.jpeg" alt="BMW X3" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW X3</div>
+                <p class="card-text">Компактный премиум-кроссовер для активного образа жизни.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- M-SERIES GALLERY -->
+    <section style="background: var(--dark-blue);" data-category="m-series">
+      <div class="container">
+        <h2 class="section-title">M-Серия - Производительность</h2>
+        
+        <div class="gallery-group">
+          <div class="gallery-group-title">⚡ Спортивные седаны</div>
+          <div class="gallery-group-subtitle">Высокопроизводительные модели M2, M3, M4, M5, M8</div>
+          <div class="cards-grid">
+            <div class="card" data-category="m-series">
+              <div class="card-image"><img src="../images/BMW_M_2.jpeg" alt="BMW M2" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW M2</div>
+                <p class="card-text">Компактный спортивный автомобиль с высокой производительностью.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+            <div class="card" data-category="m-series">
+              <div class="card-image"><img src="../images/BMW_M_3.jpeg" alt="BMW M3" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW M3</div>
+                <p class="card-text">Легендарный спортивный седан BMW с экстремальной производительностью.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+            <div class="card" data-category="m-series">
+              <div class="card-image"><img src="../images/BMW_M_4.jpeg" alt="BMW M4" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW M4</div>
+                <p class="card-text">Мощный спортивный купе с агрессивным дизайном.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+            <div class="card" data-category="m-series">
+              <div class="card-image"><img src="../images/BMW_M_5.jpeg" alt="BMW M5" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW M5</div>
+                <p class="card-text">Высокопроизводительный премиум-седан с невероятной мощностью.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+            <div class="card" data-category="m-series">
+              <div class="card-image"><img src="../images/BMW_M_8.jpeg" alt="BMW M8" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW M8</div>
+                <p class="card-text">Флагманский спортивный автомобиль BMW с максимальной производительностью.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-group">
+          <div class="gallery-group-title">🏁 M-Внедорожники</div>
+          <div class="gallery-group-subtitle">Спортивные кроссоверы серии X M</div>
+          <div class="cards-grid">
+            <div class="card" data-category="m-series,suv">
+              <div class="card-image"><img src="../images/BMW_x_5m.jpeg" alt="BMW X5 M" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW X5 M</div>
+                <p class="card-text">Спортивный премиум-кроссовер с экстремальной производительностью.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ELECTRIC MODELS GALLERY -->
+    <section style="background: var(--dark-blue);">
+      <div class="container">
+        <h2 class="section-title">Электромобили BMW i</h2>
+        
+        <div class="gallery-group">
+          <div class="gallery-group-title">🔋 Полностью электрические</div>
+          <div class="gallery-group-subtitle">Модели i3, i4, iX</div>
+          <div class="cards-grid">
+            <div class="card">
+              <div class="card-image"><img src="../images/BMW_I3_2013.jpeg" alt="BMW i3" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW i3</div>
+                <p class="card-text">Революционный городской электромобиль с инновационным дизайном.</p>
+                <span class="card-year">2013</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image"><img src="../images/BMW_330E.jpeg" alt="BMW i4" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW i4</div>
+                <p class="card-text">Полностью электрический премиум-седан с впечатляющей дальностью.</p>
+                <span class="card-year">2021</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image"><img src="../images/IX.jpeg" alt="BMW iX" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW iX</div>
+                <p class="card-text">Премиум-кроссовер будущего с полностью электрическим приводом.</p>
+                <span class="card-year">2021</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image"><img src="../images/bmw_ix50.jpeg" alt="BMW iX xDrive50" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW iX xDrive50</div>
+                <p class="card-text">Топовая версия iX с максимальной производительностью и дальностью.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-group">
+          <div class="gallery-group-title">⚙️ Гибридные (PHEV)</div>
+          <div class="gallery-group-subtitle">Подключаемые гибриды серий 3 и 5</div>
+          <div class="cards-grid">
+            <div class="card">
+              <div class="card-image"><img src="../images/BMW 3 PHEV.jpeg" alt="BMW 3 PHEV" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 3 PHEV</div>
+                <p class="card-text">Подключаемый гибрид серии 3 с экономичностью и производительностью.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image"><img src="../images/BMW 5 PHEV.jpeg" alt="BMW 5 PHEV" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW 5 PHEV</div>
+                <p class="card-text">Подключаемый гибрид премиум-класса с передовыми технологиями.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADSTERS GALLERY -->
+    <section style="background: var(--dark-blue);">
+      <div class="container">
+        <h2 class="section-title">Спортивные Roadster</h2>
+        
+        <div class="gallery-group">
+          <div class="gallery-group-title">🏎️ Открытые спортивные</div>
+          <div class="gallery-group-subtitle">Высокопроизводительные кабриолеты и спидстеры</div>
+          <div class="cards-grid">
+            <div class="card">
+              <div class="card-image"><img src="../images/BMW Z3.jpeg" alt="BMW Z3" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW Z3</div>
+                <p class="card-text">Классический спортивный roadster с обтекаемым дизайном.</p>
+                <span class="card-year">1995</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image"><img src="../images/BMW_z_4.jpeg" alt="BMW_z4" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW Z4</div>
+                <p class="card-text">Современный roadster с динамичным дизайном и высокой производительностью.</p>
+                <span class="card-year">2024</span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image"><img src="../images/BMW_I8_2014.jpeg" alt="BMW i8" loading="lazy"></div>
+              <div class="card-content">
+                <div class="card-title">BMW i8</div>
+                <p class="card-text">Гибридный спортивный roadster с инновационным дизайном.</p>
+                <span class="card-year">2014</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>О сайте</h3>
+        <p>Визуальная галерея всех моделей BMW на протяжении истории.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Навигация</h3>
+        <ul>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="./history.html">История</a></li>
+          <li><a href="./models.html">Модели</a></li>
+          <li><a href="./timeline.html">Временная шкала</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Больше</h3>
+        <ul>
+          <li><a href="./gallery.html">Галерея</a></li>
+          <li><a href="./achievements.html">Достижения</a></li>
+          <li><a href="./contact.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Контакты</h3>
+        <p>📧 Email: info@bmw-history.ru</p>
+        <p>📱 Телефон: +7 (XXX) XXX-XX-XX</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 История BMW. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <div class="scroll-to-top">↑</div>
+  <script src="../js/script.js"></script>
+</body>
+</html>

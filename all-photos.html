@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Все фото BMW</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+    }
+    
+    .photos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .photo-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(220, 0, 0, 0.2);
+      aspect-ratio: 1;
+    }
+    
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .photo-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .photo-name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      font-size: 0.9rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .photo-item:hover .photo-name {
+      transform: translateY(0);
+    }
+    
+    h1 {
+      text-align: center;
+      padding: 20px;
+      color: #dc0000;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏎️ Все фото BMW 🏎️</h1>
+  <div class="photos-grid" id="photosContainer"></div>
+
+  <script>
+    const photos = [
+      '1.jpeg', '1916.jpeg', '2.jpg', '3.jpg', '3045.jpeg', '3ser1974.jpeg',
+      '4.jpeg', '5.jpeg', '6.jpg', 'BMW1500&2002.jpeg', 'BMW1SERIES.jpeg',
+      'BMW2SERIES.jpeg', 'BMW3SERIES.jpeg', 'BMW4SERIES.jpeg', 'BMW501.jpeg',
+      'BMW5SERIES.jpeg', 'BMW5SERIES1972.jpeg', 'BMW6SERIES.jpeg', 'BMW700.jpeg',
+      'BMW7SERIES.jpeg', 'BMW7SERIES1977.jpeg', 'BMW8SERIES.jpeg', 'BMWISETTA.jpeg',
+      'BMW_I3_2013.jpeg', 'BMW_I8_2014.jpeg', 'BMW_M_2.jpeg', 'BMW_M_3.jpeg',
+      'BMW_M_4.jpeg', 'BMW_M_440.jpeg', 'BMW_M_5.jpeg', 'BMW_M_8.jpeg',
+      'BMW_PLUG-IN.jpeg', 'BMW_x_5.jpeg', 'BMW_x_5m.jpeg', 'BMW_x_6.jpeg',
+      'BMW_x_6m.jpeg', 'BMW_xm.jpeg', 'BMW_z_4.jpeg', 'BMW_z_4m.jpeg',
+      'Dixi.jpeg', 'IX.jpeg', 'M3_1986.jpeg', 'X5_1999.jpeg', 'm3.jpeg',
+      'm5.jpeg', 'mpwr.jpeg', 'msport.jpeg', 'night.jpeg', 'r32.jpg', 'x5m.jpeg'
+    ];
+
+    const container = document.getElementById('photosContainer');
+    
+    photos.forEach(photo => {
+      const div = document.createElement('div');
+      div.className = 'photo-item';
+      div.innerHTML = `
+        <img src="./images/${photo}" alt="${photo}" loading="lazy">
+        <div class="photo-name">${photo}</div>
+      `;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>

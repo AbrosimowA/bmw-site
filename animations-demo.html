@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Примеры анимаций - BMW История</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .animation-demo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .animation-box {
+      background: linear-gradient(135deg, #dc0000, #990000);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 8px 20px rgba(220, 0, 0, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .animation-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(220, 0, 0, 0.4);
+    }
+
+    .animation-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .animation-item {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #dc0000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .animation-item h4 {
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .animation-item code {
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      display: block;
+      font-size: 0.9rem;
+      overflow-x: auto;
+    }
+
+    .demo-zone {
+      min-height: 200px;
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      border: 2px dashed #dc0000;
+    }
+
+    .demo-element {
+      width: 100px;
+      height: 100px;
+      background: var(--bmw-red);
+      margin: 20px auto;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">BMW</div>
+        <span>История BMW</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./pages/history.html">История</a></li>
+          <li><a href="./pages/models.html">Модели</a></li>
+          <li><a href="./pages/timeline.html">Временная шкала</a></li>
+          <li><a href="./pages/gallery.html">Галерея</a></li>
+          <li><a href="./pages/achievements.html">Достижения</a></li>
+          <li><a href="./pages/contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" title="Переключить тему">🌙</button>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Демо Анимаций</h1>
+      <p class="hero-subtitle">Нажимайте на коробки для просмотра анимаций</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section style="background: white;">
+      <div class="container">
+        <h2 class="section-title">Все анимации BMW M стиля</h2>
+
+        <div class="animation-demo" id="animationDemo"></div>
+
+        <h3 style="margin-top: 40px; color: var(--primary-blue); text-transform: uppercase;">Примеры кода</h3>
+
+        <div class="animation-list">
+          <div class="animation-item">
+            <h4>Fade In</h4>
+            <p>Плавное появление элемента</p>
+            <code>&lt;div class="fade-in"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Zoom In</h4>
+            <p>Увеличение элемента</p>
+            <code>&lt;div class="zoom-in"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Rotate In</h4>
+            <p>Вращение при появлении</p>
+            <code>&lt;div class="rotate-in"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Slide Up</h4>
+            <p>Скольжение вверх</p>
+            <code>&lt;div class="slide-up"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Bounce In</h4>
+            <p>Подпрыгивающее появление</p>
+            <code>&lt;div class="bounce-in"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Slide Rotate</h4>
+            <p>Скольжение с вращением</p>
+            <code>&lt;div class="slide-rotate"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Flip In X</h4>
+            <p>3D разворот по X оси</p>
+            <code>&lt;div class="flip-in-x"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Fade Scale</h4>
+            <p>Затухание и масштабирование</p>
+            <code>&lt;div class="fade-scale"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Slide In Left</h4>
+            <p>Скольжение слева</p>
+            <code>&lt;div class="slide-in-left"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Slide In Right</h4>
+            <p>Скольжение справа</p>
+            <code>&lt;div class="slide-in-right"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Slide Down</h4>
+            <p>Скольжение вниз</p>
+            <code>&lt;div class="slide-down"&gt;...&lt;/div&gt;</code>
+          </div>
+
+          <div class="animation-item">
+            <h4>Glow</h4>
+            <p>Красное свечение (бесконечно)</p>
+            <code>&lt;div class="glow"&gt;...&lt;/div&gt;</code>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 60px; color: var(--primary-blue); text-transform: uppercase;">Интерактивная демонстрация</h3>
+
+        <div class="demo-zone">
+          <p style="text-align: center; color: #dc0000; font-weight: bold;">Нажимайте кнопки ниже для просмотра анимаций</p>
+          <div class="demo-element" id="demoElement">Элемент</div>
+          <div style="text-align: center; margin-top: 30px;">
+            <button class="btn" onclick="applyAnimation('fade-in')">Fade In</button>
+            <button class="btn" onclick="applyAnimation('zoom-in')">Zoom In</button>
+            <button class="btn" onclick="applyAnimation('rotate-in')">Rotate In</button>
+            <button class="btn" onclick="applyAnimation('bounce-in')">Bounce In</button>
+            <button class="btn" onclick="applyAnimation('slide-up')">Slide Up</button>
+            <button class="btn" onclick="applyAnimation('slide-rotate')">Slide Rotate</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>О демо</h3>
+        <p>Эта страница демонстрирует все доступные анимации в стиле BMW M. Используйте эти анимации на своих элементах для создания динамичного интерфейса.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Быстрые ссылки</h3>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./gallery.html">Галерея</a></li>
+          <li><a href="./IMAGES_GUIDE.md">Руководство</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 История BMW. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <div class="scroll-to-top">↑</div>
+
+  <script src="./js/script.js"></script>
+  <script>
+    // Create animation demo boxes
+    const animations = [
+      'fade-in', 'zoom-in', 'rotate-in', 'slide-up', 'bounce-in',
+      'slide-down', 'flip-in-x', 'slide-in-left', 'slide-in-right',
+      'slide-rotate', 'fade-scale', 'glow'
+    ];
+
+    const demoContainer = document.getElementById('animationDemo');
+
+    animations.forEach(anim => {
+      const box = document.createElement('div');
+      box.className = 'animation-box';
+      box.textContent = anim.toUpperCase();
+      box.onclick = () => {
+        // Удалить старые классы
+        box.className = 'animation-box';
+        // Добавить выбранный класс
+        box.classList.add(anim);
+      };
+      demoContainer.appendChild(box);
+    });
+
+    // Interactive demo
+    function applyAnimation(animName) {
+      const element = document.getElementById('demoElement');
+      element.style.animation = 'none';
+      
+      // Trigger reflow
+      void element.offsetWidth;
+      
+      element.classList.remove(...animations);
+      element.classList.add(animName);
+    }
+  </script>
+</body>
+</html>

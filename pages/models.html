@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модели BMW - Полный каталог</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .filter-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      background: var(--white);
+      color: var(--primary-blue);
+      border: 2px solid var(--secondary-blue);
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--secondary-blue);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">BMW</div>
+        <span>История BMW</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="./history.html">История</a></li>
+          <li><a href="./models.html">Модели</a></li>
+          <li><a href="./timeline.html">Временная шкала</a></li>
+          <li><a href="./gallery.html">Галерея</a></li>
+        </ul>
+      </nav>
+      <div class="theme-selector">
+        <button class="theme-btn" data-theme="dark" title="Темная 🌙">🌙</button>
+        <button class="theme-btn" data-theme="light" title="Светлая ☀️">☀️</button>
+        <button class="theme-btn" data-theme="bmw-m-dark" title="BMW M Dark 🏁">🏁</button>
+        <button class="theme-btn" data-theme="bmw-m-red" title="BMW M Red 🔴">🔴</button>
+        <button class="theme-btn" data-theme="sport" title="Sport ⚡">⚡</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../index.html">Главная</a>
+    <span>/</span>
+    <span>Модели</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" style="padding: 80px 20px;">
+    <div class="hero-content">
+      <h1>Все модели BMW</h1>
+      <p class="hero-subtitle">От компактных до премиум-кроссоверов</p>
+      <img src="../images/BMW3SERIES.jpeg" alt="Все модели BMW" style="margin-top: 30px; max-width: 600px; width: 100%; border-radius: 8px;">
+    </div>
+  </section>
+
+  <main>
+    <!-- SEARCH & FILTER -->
+    <section style="background: var(--dark-blue);">
+      <div class="container">
+        <h2 class="section-title">Найти модель</h2>
+        
+        <div style="margin-bottom: 30px;">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Поиск по названию модели..."
+            style="width: 100%; padding: 12px 20px; border: 2px solid var(--secondary-blue); border-radius: 6px; font-size: 1rem;"
+          >
+        </div>
+
+        <h3 style="text-align: center; margin-bottom: 20px; color: var(--primary-blue);">Фильтр по классу</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Все модели</button>
+          <button class="filter-btn" data-filter="sedan">Седаны</button>
+          <button class="filter-btn" data-filter="coupe">Купе</button>
+          <button class="filter-btn" data-filter="suv">SUV</button>
+          <button class="filter-btn" data-filter="roadster">Roadster</button>
+          <button class="filter-btn" data-filter="electric">Электро</button>
+          <button class="filter-btn" data-filter="m-series">M-серия</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDAN MODELS -->
+    <section style="background: var(--dark-blue);">
+      <div class="container">
+        <h2 class="section-title">Седаны</h2>
+        <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem;">Элегантные и динамичные седаны для любых условий</p>
+        
+        <div class="cards-grid">
+          <!-- 1 Series -->
+          <div class="card" data-filter="sedan">
+            <div class="card-image"><img src="../images/BMW1SERIES.jpeg" alt="BMW 1 Series" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW 1 Series</div>
+              <p class="card-text">Компактный премиум-седан. Начальный уровень линейки BMW. Идеален для города.</p>
+              <p><strong>Мощность:</strong> 116-228 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 10.2-6.2 сек</p>
+            </div>
+          </div>
+
+          <!-- 2 Series -->
+          <div class="card" data-filter="sedan">
+            <div class="card-image"><img src="../images/BMW2SERIES.jpeg" alt="BMW 2 Series" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW 2 Series</div>
+              <p class="card-text">Компактный спортивный седан. Развитие традиции Серии 2002.</p>
+              <p><strong>Мощность:</strong> 140-252 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 8.5-5.8 сек</p>
+            </div>
+          </div>
+
+          <!-- 3 Series -->
+          <div class="card" data-filter="sedan">
+            <div class="card-image"><img src="../images/BMW3SERIES.jpeg" alt="BMW 3 Series" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW 3 Series</div>
+              <p class="card-text">Самая популярная серия BMW. Идеальный баланс спорта и комфорта.</p>
+              <p><strong>Мощность:</strong> 184-503 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 8.3-3.9 сек</p>
+              <a href="./3-series.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <!-- 4 Series -->
+          <div class="card" data-filter="coupe">
+            <div class="card-image"><img src="../images/BMW4SERIES.jpeg" alt="BMW 4 Series" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW 4 Series</div>
+              <p class="card-text">Спортивное купе-седан. Стильный и мощный автомобиль премиум-класса.</p>
+              <p><strong>Мощность:</strong> 190-500 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 7.9-3.9 сек</p>
+            </div>
+          </div>
+
+          <!-- 5 Series -->
+          <div class="card" data-filter="sedan">
+            <div class="card-image"><img src="../images/BMW5SERIES.jpeg" alt="BMW 5 Series" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW 5 Series</div>
+              <p class="card-text">Премиум-седан среднего класса. Вершина комфорта и технологий.</p>
+              <p><strong>Мощность:</strong> 265-530 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 6.0-3.6 сек</p>
+              <a href="./5-series.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <!-- 6 Series -->
+          <div class="card" data-filter="coupe">
+            <div class="card-image"><img src="../images/BMW6SERIES.jpeg" alt="BMW 6 Series" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW 6 Series</div>
+              <p class="card-text">Роскошное купе. Сочетание элегантности и мощи.</p>
+              <p><strong>Мощность:</strong> 320-560 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 5.4-3.9 сек</p>
+            </div>
+          </div>
+
+          <!-- 7 Series -->
+          <div class="card" data-filter="sedan">
+            <div class="card-image"><img src="../images/BMW7SERIES.jpeg" alt="BMW 7 Series" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW 7 Series</div>
+              <p class="card-text">Флагманский седан. Вершина люксовых автомобилей BMW.</p>
+              <p><strong>Мощность:</strong> 330-625 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 5.4-3.5 сек</p>
+              <a href="./7-series.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <!-- 8 Series -->
+          <div class="card" data-filter="coupe">
+            <div class="card-image"><img src="../images/BMW8SERIES.jpeg" alt="BMW 8 Series" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW 8 Series</div>
+              <p class="card-text">Роскошное спортивное купе. Возврождение культовой серии.</p>
+              <p><strong>Мощность:</strong> 335-625 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 5.3-3.6 сек</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUV MODELS -->
+    <section style="background: var(--dark-blue);">
+      <div class="container">
+        <h2 class="section-title">SUV и Кроссоверы</h2>
+        <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem;">Премиум-кроссоверы для активного образа жизни</p>
+        
+        <div class="cards-grid">
+          <div class="card" data-filter="suv">
+            <div class="card-image"><img src="../images/bmw_x1.jpeg" alt="BMW X1" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW X1</div>
+              <p class="card-text">Компактный премиум-кроссовер. Идеален для города и активного образа жизни.</p>
+              <p><strong>Мощность:</strong> 116-228 л.с.</p>
+              <p><strong>Привод:</strong> FWD/AWD</p>
+              <a href="./x-series.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="card" data-filter="suv">
+            <div class="card-image"><img src="../images/bmw_x2.jpeg" alt="BMW X2" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW X2</div>
+              <p class="card-text">Компактный премиум-кроссовер спортивного стиля с динамичным дизайном.</p>
+              <p><strong>Мощность:</strong> 150-252 л.с.</p>
+              <p><strong>Привод:</strong> FWD/AWD</p>
+              <a href="./x-series.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="card" data-filter="suv">
+            <div class="card-image"><img src="../images/bmw_x3.jpeg" alt="BMW X3" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW X3</div>
+              <p class="card-text">Среднеразмерный премиум-кроссовер. Самый популярный BMW SUV после X5.</p>
+              <p><strong>Мощность:</strong> 184-510 л.с.</p>
+              <p><strong>Привод:</strong> AWD</p>
+              <a href="./x-series.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="card" data-filter="suv">
+            <div class="card-image"><img src="../images/bmw_x4.jpeg" alt="BMW X4" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW X4</div>
+              <p class="card-text">Спортивный кроссовер-купе. Комбинирует практичность X3 и стиль купе.</p>
+              <p><strong>Мощность:</strong> 190-510 л.с.</p>
+              <p><strong>Привод:</strong> AWD</p>
+              <a href="./x-series.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="card" data-filter="suv">
+            <div class="card-image"><img src="../images/BMW_x_5.jpeg" alt="BMW X5" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW X5</div>
+              <p class="card-text">Полноразмерный люкс-кроссовер. Революционизировал премиум-сегмент SUV.</p>
+              <p><strong>Мощность:</strong> 258-530 л.с.</p>
+              <p><strong>Привод:</strong> AWD</p>
+              <a href="./x-series.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="card" data-filter="suv">
+            <div class="card-image"><img src="../images/BMW_x_6.jpeg" alt="BMW X6" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW X6</div>
+              <p class="card-text">Спортивный премиум-кроссовер-купе. Смелый и агрессивный дизайн.</p>
+              <p><strong>Мощность:</strong> 258-625 л.с.</p>
+              <p><strong>Привод:</strong> AWD</p>
+              <a href="./x-series.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="card" data-filter="suv">
+            <div class="card-image"><img src="../images/bmw_x7.jpeg" alt="BMW X7" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW X7</div>
+              <p class="card-text">Флагманский полноразмерный SUV. Вершина люкса в сегменте кроссоверов.</p>
+              <p><strong>Мощность:</strong> 340-625 л.с.</p>
+              <p><strong>Привод:</strong> AWD</p>
+              <a href="./x-series.html"class="btn">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="card" data-filter="suv">
+            <div class="card-image"><img src="../images/IX.jpeg" alt="BMW iX" loading="lazy"></div>
+            <div class="card-content">
+              <div class="card-title">BMW iX</div>
+              <p class="card-text">Полностью электрический премиум-кроссовер нового поколения.</p>
+              <p><strong>Мощность:</strong> 286-619 л.с.</p>
+              <p><strong>Привод:</strong> AWD</p>
+              <a href="./x-series.html" class="btn">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ELECTRIC & M SERIES -->
+    <section style="background: #f0f8ff;">
+      <div class="container">
+        <h2 class="section-title">Электромобили и M-Серия</h2>
+        
+        <h3 style="color: var(--primary-blue); font-size: 1.6rem; margin: 40px 0 20px;">Электромобили BMW i</h3>
+        <div class="cards-grid">
+          <div class="card" data-filter="electric">
+            <div class="card-image"><img src="../images/BMW_I3_2013.jpeg" alt="BMW i3" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW i3</div>
+              <p class="card-text">Революционный городской электромобиль. Запас: 260-460 км.</p>
+              <p><strong>Мощность:</strong> 170-181 л.с.</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="electric">
+            <div class="card-image"><img src="../images/BMW_I8_2014.jpeg" alt="BMW i4" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW i4</div>
+              <p class="card-text">Электрический спортивный седан. Запас: 430-590 км.</p>
+              <p><strong>Мощность:</strong> 260-536 л.с.</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="electric">
+            <div class="card-image"><img src="../images/IX.jpeg" alt="BMW iX" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW iX</div>
+              <p class="card-text">Премиум-кроссовер будущего. Запас: 324-636 км.</p>
+              <p><strong>Мощность:</strong> 286-619 л.с.</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="electric">
+            <div class="card-image"><img src="../images/bmw_ix50.jpeg" alt="BMW iX xDrive50" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW iX xDrive50</div>
+              <p class="card-text">Топовая версия iX с максимальной мощностью и запасом хода.</p>
+              <p><strong>Мощность:</strong> 619 л.с.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="color: var(--primary-blue); font-size: 1.6rem; margin: 60px 0 20px;">M-Series - Высокопроизводительные модели</h3>
+        <div class="cards-grid">
+          <div class="card" data-filter="m-series">
+            <div class="card-image"><img src="../images/BMW_M_2.jpeg" alt="BMW M2" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW M2</div>
+              <p class="card-text">Компактный спортивный автомобиль с максимальной производительностью.</p>
+              <p><strong>Мощность:</strong> 503-530 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 3.9-4.0 сек</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="m-series">
+            <div class="card-image"><img src="../images/BMW_M_3.jpeg" alt="BMW M3" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW M3</div>
+              <p class="card-text">Легендарный спортивный седан. Культовая серия с 1986 года.</p>
+              <p><strong>Мощность:</strong> 510-625 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 3.5-3.9 сек</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="m-series">
+            <div class="card-image"><img src="../images/BMW_M_4.jpeg" alt="BMW M4" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW M4</div>
+              <p class="card-text">Спортивное купе M-серии. Преемник легендарного M3 Coupe.</p>
+              <p><strong>Мощность:</strong> 503-625 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 3.6-3.9 сек</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="m-series">
+            <div class="card-image"><img src="../images/BMW_M_5.jpeg" alt="BMW M5" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW M5</div>
+              <p class="card-text">Мощный спортивный седан. Комбинирует люкс и екстремальную производительность.</p>
+              <p><strong>Мощность:</strong> 530 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 3.6 сек</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="m-series">
+            <div class="card-image"><img src="../images/BMW_M_440.jpeg" alt="BMW M440i" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW M440i</div>
+              <p class="card-text">Высокопроизводительная версия 4 Series.</p>
+              <p><strong>Мощность:</strong> 500 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 3.9 сек</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="m-series">
+            <div class="card-image"><img src="../images/BMW_x_5m.jpeg" alt="BMW X5 M" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW X5 M</div>
+              <p class="card-text">Сверхмощный спортивный кроссовер. 0-100 км/ч за 3.8 сек!</p>
+              <p><strong>Мощность:</strong> 617 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 3.8 сек</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="m-series">
+            <div class="card-image"><img src="../images/BMW_x_6m.jpeg" alt="BMW X6 M" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW X6 M</div>
+              <p class="card-text">Спортивный кроссовер-купе M версии. Агрессивный и мощный.</p>
+              <p><strong>Мощность:</strong> 617 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 3.8 сек</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="m-series">
+            <div class="card-image"><img src="../images/BMW_M_8.jpeg" alt="BMW M8" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW M8</div>
+              <p class="card-text">Флагманский спортивный автомобиль M-серии. Абсолютная производительность.</p>
+              <p><strong>Мощность:</strong> 625 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 3.6 сек</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLASSIC ROADSTERS -->
+    <section style="background: var(--dark-blue);">
+      <div class="container">
+        <h2 class="section-title">Спортивные автомобили и Roadster</h2>
+        <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem;">Открытые спортивные автомобили для любителей адреналина</p>
+        
+        <div class="cards-grid">
+          <div class="card" data-filter="roadster">
+            <div class="card-image"><img src="../images/BMW_z_4.jpeg" alt="BMW Z4" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW Z4</div>
+              <p class="card-text">Спортивный roadster с откидным верхом. Идеален для летних поездок.</p>
+              <p><strong>Мощность:</strong> 194-382 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 6.0-4.0 сек</p>
+            </div>
+          </div>
+
+          <div class="card" data-filter="roadster">
+            <div class="card-image"><img src="../images/BMW_z_4m.jpeg" alt="BMW M440i xDrive" style="width: 100%; height: 300px; object-fit: cover; object-position: center; border-radius: 4px;"></div>
+            <div class="card-content">
+              <div class="card-title">BMW M440i xDrive</div>
+              <p class="card-text">Спортивный convertible с мощным двигателем.</p>
+              <p><strong>Мощность:</strong> 382 л.с.</p>
+              <p><strong>0-100 км/ч:</strong> 4.0 сек</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>О сайте</h3>
+        <p>Полный каталог всех моделей BMW с характеристиками и подробной информацией.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Навигация</h3>
+        <ul>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="./history.html">История</a></li>
+          <li><a href="./models.html">Модели</a></li>
+          <li><a href="./timeline.html">Временная шкала</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Больше</h3>
+        <ul>
+          <li><a href="./gallery.html">Галерея</a></li>
+          <li><a href="./achievements.html">Достижения</a></li>
+          <li><a href="./contact.html">Контакты</a></li>
+        </ul>
+      </div>
+     
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 История BMW. Абросимов Алексей.</p>
+    </div>
+  </footer>
+
+  <div class="scroll-to-top">↑</div>
+  <script src="../js/script.js"></script>
+</body>
+</html>

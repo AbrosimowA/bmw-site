@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты - История BMW</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .contact-form {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: var(--primary-blue);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid var(--light-gray);
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--secondary-blue);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .contact-info-item {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      border-top: 4px solid var(--bmw-red);
+      border-left: 4px solid var(--bmw-red);
+      transition: all 0.3s ease;
+    }
+
+    .contact-info-item:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(220, 0, 0, 0.2);
+    }
+
+    .contact-info-item h3 {
+      color: var(--primary-blue);
+      margin-bottom: 15px;
+    }
+
+    .contact-info-item p {
+      color: var(--text-color);
+      margin-bottom: 10px;
+    }
+
+    .contact-info-item a {
+      color: var(--bmw-red);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: bold;
+    }
+
+    .contact-info-item a:hover {
+      color: #ff3333;
+      text-shadow: 0 0 10px rgba(220, 0, 0, 0.5);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--bmw-red);
+      box-shadow: 0 0 10px rgba(220, 0, 0, 0.3);
+    }
+
+    .contact-form button {
+      background: var(--bmw-red);
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .contact-form button:hover {
+      background: #990000;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(220, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">BMW</div>
+        <span>История BMW</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="./history.html">История</a></li>
+          <li><a href="./models.html">Модели</a></li>
+          <li><a href="./timeline.html">Временная шкала</a></li>
+          <li><a href="./gallery.html">Галерея</a></li>
+          <li><a href="./achievements.html">Достижения</a></li>
+          <li><a href="./contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" title="Переключить тему">🌙</button>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="../index.html">Главная</a>
+    <span>/</span>
+    <span>Контакты</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" style="padding: 80px 20px;">
+    <div class="hero-content">
+      <h1>Свяжитесь с нами</h1>
+      <p class="hero-subtitle">Вопросы? Мы здесь, чтобы помочь</p>
+    </div>
+  </section>
+
+  <main>
+    <!-- CONTACT INFO -->
+    <section style="background: var(--dark-blue);">
+      <div class="container">
+        <h2 class="section-title">Как с нами связаться</h2>
+        
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <h3>📧 Email</h3>
+            <p>Основной: <a href="mailto:info@bmw-history.ru">info@bmw-history.ru</a></p>
+            <p>Поддержка: <a href="mailto:support@bmw-history.ru">support@bmw-history.ru</a></p>
+            <p>Вопросы: <a href="mailto:questions@bmw-history.ru">questions@bmw-history.ru</a></p>
+          </div>
+
+          <div class="contact-info-item">
+            <h3>📱 Телефон</h3>
+            <p>Главный офис: +7 (XXX) XXX-XX-XX</p>
+            <p>Поддержка: +7 (XXX) XXX-XX-XX</p>
+            <p>Пн-Пт: 09:00 - 18:00 (МСК)</p>
+          </div>
+
+          <div class="contact-info-item">
+            <h3>📍 Адрес</h3>
+            <p>Российская Федерация</p>
+            <p>Москва</p>
+            <p>Улица Тверская, д.1</p>
+          </div>
+
+          <div class="contact-info-item">
+            <h3>🌐 Социальные сети</h3>
+            <p><a href="#" target="_blank">Facebook</a></p>
+            <p><a href="#" target="_blank">Instagram</a></p>
+            <p><a href="#" target="_blank">Twitter/X</a></p>
+          </div>
+
+          <div class="contact-info-item">
+            <h3>⏰ Часы работы</h3>
+            <p>Пн-Пт: 09:00 - 18:00</p>
+            <p>Сб: 10:00 - 16:00</p>
+            <p>Вс: Закрыто</p>
+          </div>
+
+          <div class="contact-info-item">
+            <h3>📚 Информация</h3>
+            <p>Этот сайт посвящён истории BMW</p>
+            <p>Создан в образовательных целях</p>
+            <p>Не является официальным сайтом</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section style="background: #f0f8ff;">
+      <div class="container">
+        <h2 class="section-title">Отправить сообщение</h2>
+        
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Ваше имя *</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              placeholder="Введите ваше имя"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="Введите ваш email"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              placeholder="+7 (XXX) XXX-XX-XX"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Тема *</label>
+            <input 
+              type="text" 
+              id="subject" 
+              name="subject" 
+              required 
+              placeholder="Тема вашего сообщения"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="message">Сообщение *</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              required 
+              placeholder="Напишите ваше сообщение здесь..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="cta-button" style="width: 100%; background: var(--secondary-blue); color: var(--white); border-color: var(--secondary-blue);">
+            Отправить сообщение
+          </button>
+        </form>
+
+        <div style="text-align: center; margin-top: 30px; color: var(--text-color);">
+          <p>* Поля, отмеченные звёздочкой, обязательны для заполнения</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section style="background: var(--dark-blue);">
+      <div class="container">
+        <h2 class="section-title">Часто задаваемые вопросы</h2>
+        
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-image">❓</div>
+            <div class="card-content">
+              <div class="card-title">Кто создал этот сайт?</div>
+              <p class="card-text">Этот сайт был создан как образовательный проект для демонстрации истории BMW и её автомобильных достижений.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">❓</div>
+            <div class="card-content">
+              <div class="card-title">Это официальный сайт BMW?</div>
+              <p class="card-text">Нет, это неофициальный веб-сайт, созданный в образовательных целях. Для официальной информации посетите www.bmw.com</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">❓</div>
+            <div class="card-content">
+              <div class="card-title">Могу ли я использовать контент?</div>
+              <p class="card-text">Контент этого сайта доступен для личного использования. Для коммерческого использования свяжитесь с нами.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">❓</div>
+            <div class="card-content">
+              <div class="card-title">Как мне предложить улучшение?</div>
+              <p class="card-text">Вы можете отправить свои предложения через форму контактов выше или написать нам по email info@bmw-history.ru</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">❓</div>
+            <div class="card-content">
+              <div class="card-title">Есть ошибка на сайте?</div>
+              <p class="card-text">Если вы обнаружили ошибку, пожалуйста, напишите нам на support@bmw-history.ru с описанием проблемы.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">❓</div>
+            <div class="card-content">
+              <div class="card-title">Мобильное приложение?</div>
+              <p class="card-text">На данный момент приложение не доступно, но сайт полностью адаптирован для всех мобильных устройств.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>О сайте</h3>
+        <p>Этот сайт посвящен истории BMW и не является официальным сайтом BMW Group.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Навигация</h3>
+        <ul>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="./history.html">История</a></li>
+          <li><a href="./models.html">Модели</a></li>
+          <li><a href="./timeline.html">Временная шкала</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Больше</h3>
+        <ul>
+          <li><a href="./gallery.html">Галерея</a></li>
+          <li><a href="./achievements.html">Достижения</a></li>
+          <li><a href="./contact.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Контакты</h3>
+        <p>📧 Email: info@bmw-history.ru</p>
+        <p>📱 Телефон: +7 (XXX) XXX-XX-XX</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 История BMW. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <div class="scroll-to-top">↑</div>
+  
+  <script src="../js/script.js"></script>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      
+      alert(`Спасибо, ${name}! Ваше сообщение было отправлено на ${email}. Мы ответим вам вскоре.`);
+      
+      // Reset form
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
