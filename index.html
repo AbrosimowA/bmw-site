@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История BMW - От истоков к современности</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">BMW</div>
+        <span>История BMW</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./pages/history.html">История</a></li>
+          <li><a href="./pages/models.html">Модели</a></li>
+          <li><a href="./pages/timeline.html">Временная шкала</a></li>
+          <li><a href="./pages/gallery.html">Галерея</a></li>
+        </ul>
+      </nav>
+      <div class="theme-selector">
+        <button class="theme-btn" data-theme="dark" title="Темная 🌙" onclick="changeTheme('dark')">🌙</button>
+        <button class="theme-btn" data-theme="light" title="Светлая ☀️" onclick="changeTheme('light')">☀️</button>
+        <button class="theme-btn" data-theme="bmw-m-dark" title="BMW M Dark 🏁" onclick="changeTheme('bmw-m-dark')">🏁</button>
+        <button class="theme-btn" data-theme="bmw-m-red" title="BMW M Red 🔴" onclick="changeTheme('bmw-m-red')">🔴</button>
+        <button class="theme-btn" data-theme="sport" title="Sport ⚡" onclick="changeTheme('sport')">⚡</button>
+      </div>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>BMW - Искусство вождения</h1>
+      <p class="hero-subtitle">Столетие инноваций и совершенства</p>
+      <a href="./pages/history.html" class="cta-button">Исследовать историю</a>
+    </div>
+  </section>
+
+  
+  <main>
+   
+    <section style="background: var(--white);">
+      <div class="container">
+        <h2 class="section-title">Ключевые факты о BMW</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-image"><img src="./images/1.jpeg" alt="Основание BMW"></div>
+            <div class="card-content">
+              <div class="card-title">Основание</div>
+              <p class="card-text">Компания BMW была основана в 1916 году в Мюнхене и изначально производила авиационные двигатели.</p>
+              <span class="card-year">1916</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image"><img src="./images/2.jpg" alt="Производство"></div>
+            <div class="card-content">
+              <div class="card-title">Производство</div>
+              <p class="card-text">Первый автомобиль BMW был выпущен в 1928 году. С тех пор компания производит только автомобили премиум-класса.</p>
+              <span class="card-year">1928</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image"><img src="./images/3.jpg" alt="Глобальное присутствие"></div>
+            <div class="card-content">
+              <div class="card-title">Глобальное присутствие</div>
+              <p class="card-text">BMW работает в более чем 140 странах мира и имеет производственные мощности на всех континентах.</p>
+              <span class="card-year">2025</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image"><img src="./images/4.jpeg" alt="Премии и награды"></div>
+            <div class="card-content">
+              <div class="card-title">Премии и награды</div>
+              <p class="card-text">BMW неоднократно отмечалась наградами за инновационность, дизайн и спортивные достижения.</p>
+              <span class="card-year">2025</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image"><img src="./images/5.jpeg" alt="Электромобильность"></div>
+            <div class="card-content">
+              <div class="card-title">Электромобильность</div>
+              <p class="card-text">Линейка BMW i представляет будущее электромобилей с инновационными технологиями и дизайном.</p>
+              <span class="card-year">2013</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image"><img src="./images/6.jpg" alt="Электромобильность"></div>
+            <div class="card-content">
+              <div class="card-title">Сотрудники</div>
+              <p class="card-text">BMW нанимает более 150 000 сотрудников по всему миру, включая инженеров, дизайнеров и производителей.</p>
+              <span class="card-year">2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION WITH IMAGES -->
+    <section style="background: #f5f5f5;">
+      <div class="container">
+        <h2 class="section-title">Галерея BMW M</h2>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="./images/m3.jpeg" alt="BMW M3" loading="lazy">
+            <div class="gallery-overlay">BMW M3</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/m5.jpeg" alt="BMW M5" loading="lazy">
+            <div class="gallery-overlay">BMW M5</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/msport.jpeg" alt="BMW спортивное" loading="lazy">
+            <div class="gallery-overlay">BMW M Sport</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/x5m.jpeg" alt="BMW X5" loading="lazy">
+            <div class="gallery-overlay">BMW X5</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/mpwr.jpeg" alt="BMW красный" loading="lazy">
+            <div class="gallery-overlay">BMW M Power</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./images/night.jpeg" alt="BMW ночью" loading="lazy">
+            <div class="gallery-overlay">BMW Night</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section style="background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); color: var(--white); text-align: center;">
+      <div class="container">
+        <h2 class="section-title" style="color: var(--white);">Статистика BMW</h2>
+        <div class="cards-grid">
+          <div style="padding: 30px; background: rgba(220, 0, 0, 0.1); border-radius: 8px; border-left: 4px solid #dc0000;">
+            <div class="counter" data-target="10000000" style="font-size: 2rem; font-weight: bold; color: #dc0000;">100 млн</div>
+            <p style="margin-top: 10px; font-size: 1.1rem;">+ автомобилей произведено</p>
+          </div>
+          <div style="padding: 30px; background: rgba(220, 0, 0, 0.1); border-radius: 8px; border-left: 4px solid #dc0000;">
+            <div class="counter" data-target="108" style="font-size: 2rem; font-weight: bold; color: #dc0000;">109</div>
+            <p style="margin-top: 10px; font-size: 1.1rem;">лет инноваций</p>
+          </div>
+          <div style="padding: 30px; background: rgba(220, 0, 0, 0.1); border-radius: 8px; border-left: 4px solid #dc0000;">
+            <div class="counter" data-target="50" style="font-size: 2rem; font-weight: bold; color: #dc0000;">30</div>
+            <p style="margin-top: 10px; font-size: 1.1rem;">+ выпущено серий</p>
+          </div>
+          <div style="padding: 30px; background: rgba(220, 0, 0, 0.1); border-radius: 8px; border-left: 4px solid #dc0000;">
+            <div class="counter" data-target="150000" style="font-size: 2rem; font-weight: bold; color: #dc0000;">150 000</div>
+            <p style="margin-top: 10px; font-size: 1.1rem;">сотрудников</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <section style="background: var(--white);">
+      <div class="container">
+        <h2 class="section-title">Важные события</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">1916</div>
+              <h4>Основание компании</h4>
+              <p>Байеризе Моторен Верке основана как производитель авиационных двигателей.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">1928</div>
+              <h4>Первый автомобиль</h4>
+              <p>Выпущен первый автомобиль BMW Dixi, заложивший основы автомобильного производства.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">1959</div>
+              <h4>BMW Isetta</h4>
+              <p>Создана легендарная Isetta - микролитражка, спасившая компанию от финансового краха.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">1966</div>
+              <h4>BMW 1500</h4>
+              <p>Революционный спортивный седан, установивший новые стандарты класса.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">1974</div>
+              <h4>BMW 3 Series</h4>
+              <p>Легендарная серия, ставшая символом компании и лидером рынка премиум-седанов.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">1987</div>
+              <h4>BMW M5</h4>
+              <p>Мощный спортивный седан, определивший развитие M серии на десятилетия.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">1999</div>
+              <h4>BMW X5</h4>
+              <p>Первый премиум-кроссовер, революционизировавший сегмент SUV.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2013</div>
+              <h4>BMW i3</h4>
+              <p>Революционный электромобиль, демонстрирующий видение BMW будущего.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-year">2024</span>
+              <h4>Новая эра</h4>
+              <p>BMW продолжает инновации в электромобильности и автономном вождении.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: linear-gradient(135deg, #dc0000 0%, #990000 100%); color: var(--white); text-align: center;">
+      <div class="container">
+        <h2 class="section-title" style="color: var(--white);">Готовы исследовать дальше?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 30px;">Откройте для себя полную историю BMW и все его выдающиеся модели серии M</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+          <a href="./pages/models.html" class="cta-button" style="background: var(--white); color: #dc0000; border-color: var(--white);">Все модели</a>
+          <a href="./pages/gallery.html" class="cta-button" style="background: transparent; color: var(--white); border-color: var(--white);">Галерея</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ 
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>О сайте</h3>
+        <p>Этот сайт посвящен полной истории автомобильной компании BMW - от её основания в 1916 году до наших дней.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Навигация</h3>
+        <ul>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./pages/history.html">История</a></li>
+          <li><a href="./pages/models.html">Модели</a></li>
+          <li><a href="./pages/timeline.html">Временная шкала</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Больше</h3>
+        <ul>
+          <li><a href="./pages/gallery.html">Галерея</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 История BMW.  Абросимов Алексей</p>
+      <p>Это веб-сайт создан в образовательных целях и не является официальным сайтом BMW Group.</p>
+    </div>
+  </footer>
+
+  
+  <div class="scroll-to-top">↑</div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
